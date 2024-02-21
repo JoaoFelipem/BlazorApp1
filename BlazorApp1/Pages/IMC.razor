@@ -1,0 +1,74 @@
+﻿@page "/imc"
+@using BlazorApp1.Models
+
+
+
+
+<div class="container">
+    <h3><center>Calculadora De Imc</center></h3>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">NOME:</label>
+        <input @bind="pessoa.Nome" type="text" class="form-control" id="exampleFormControlInput1">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">PESO:</label>
+        <input @bind="pessoa.Peso" type="number" class="form-control" id="exampleFormControlInput1">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">ALTURA (cm) :</label>
+        <input @onfocusout="Altura" @bind="pessoa.Altura" type="number" class="form-control" id="exampleFormControlInput1">
+    </div>
+
+    <button type="button" class="btn btn-primary" @onclick="CalcularIMC">CALCULAR</button>
+    <button type="button" class="btn btn-warning">CANCELAR</button>
+    <button type="button" class="btn btn-success">SALVAR</button>
+
+    <nav class="navbar navbar-light" style="background-color: white"></nav>
+
+    <nav class="navbar navbar-light" style="background-color: darkgreen"></nav>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">RESULTADO:</label>
+        <input @bind="imc" type="number" class="form-control" id="exampleFormControlInput1">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">CLASSIFICAÇÃO: </label>
+        @if(imc > 25)
+        {
+            <div class="alert alert-warning" role="alert">
+                
+            </div>
+            
+        }else{
+
+        }
+    </div>
+</div>
+
+
+@code {
+
+        Pessoa pessoa = new Pessoa();
+
+        double? imc=0;
+        string classificacao;
+
+    private void Altura()
+    {
+
+        if (pessoa.Altura > 15 && pessoa.Altura < 300)
+        {
+            pessoa.Altura = pessoa.Altura / 100;
+        }
+        
+    }
+
+    private void CalcularIMC()
+    {
+        imc= pessoa.CalcularIMC();
+    }
+}
