@@ -30,3 +30,6 @@ C:\Users\2022102060029\source\repos\BlazorApp1\obj\Debug\net6.0\refint\BlazorApp
 C:\Users\2022102060029\source\repos\BlazorApp1\obj\Debug\net6.0\BlazorApp1.pdb
 C:\Users\2022102060029\source\repos\BlazorApp1\obj\Debug\net6.0\BlazorApp1.genruntimeconfig.cache
 C:\Users\2022102060029\source\repos\BlazorApp1\obj\Debug\net6.0\ref\BlazorApp1.dll
+C:\Users\joaof\Área de Trabalho\ADS\5º Período\Programacao_Acesso_a_BD\BlazorApp1\BlazorApp1\obj\Debug\net6.0\BlazorApp1.dll
+C:\Users\joaof\Área de Trabalho\ADS\5º Período\Programacao_Acesso_a_BD\BlazorApp1\BlazorApp1\obj\Debug\net6.0\refint\BlazorApp1.dll
+C:\Users\joaof\Área de Trabalho\ADS\5º Período\Programacao_Acesso_a_BD\BlazorApp1\BlazorApp1\obj\Debug\net6.0\BlazorApp1.pdb
